@@ -1,0 +1,6 @@
+#!/bin/sh
+server 0.
+sed -i "/pool/d" /etc/ntpsec/ntp.conf
+echo "server 0.tr.pool.ntp.org" >> //etc/ntpsec/ntp.conf
+systemctl enable ntp
+systemctl restart ntp
